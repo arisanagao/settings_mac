@@ -1,5 +1,5 @@
 export PATH=/usr/local:$PATH
-PS1="[\u@\h \[\033[91m\]\w/\[\033[0m\]] $"
+PS1="\n\t \u@\h:\[\033[91m\]\w\e[0m\]\n$"
 
 export LSCOLORS=gxfxbxdxcxegedabagacad
 alias ls='ls -GhF'

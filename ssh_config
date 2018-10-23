@@ -1,0 +1,20 @@
+Host fumidai
+  HostName ipaddress
+  User username
+  IdentityFile ~/.ssh/keys/hoge
+  StrictHostKeyChecking no
+
+Host ssh_name
+  Hostname ipaddress
+  proxycommand ssh -W %h:%p sb
+  user username
+  IdentityFile ~/.ssh/keys/hoge
+  StrictHostKeyChecking no
+
+Host *
+    ServerAliveInterval    120
+    ServerAliveCountMax    12
+    PubkeyAuthentication    yes
+    Compression        yes
+    AddressFamily        inet
+    GSSAPIAuthentication    no

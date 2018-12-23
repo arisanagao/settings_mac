@@ -10,11 +10,6 @@ alias macdown="/Applications/MacDown.app/Contents/MacOS/MacDown"
 alias csshX='i2cssh'
 alias jmeter='java -jar /Users/a-nagao/apache-jmeter-3.2/bin/ApacheJMeter.jar &'
 
-export LESS='-R'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
-alias less='less -FX --quit-at-eof'
-alias more='less -FX --quit-at-eof'
-
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then

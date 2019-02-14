@@ -1,4 +1,3 @@
-colorscheme ron
 set number
 syntax on
 
@@ -9,16 +8,19 @@ augroup auto_comment_off
 augroup END
 
 function! s:remove_dust()
-        let cursor = getpos(".")
+  let cursor = getpos(".")
 
-        " 保存時に行末の空白を除去する
-        %s/\s\+$//ge
+  " 保存時に行末の空白を除去する
+  %s/\s\+$//ge
 
-        " 保存時に空行の空白を除去する
-        %s/^\+$//ge
+  " 保存時に空行の空白を除去する
+  %s/^\+$//ge
 
-        call setpos(".", cursor)
-        unlet cursor
+  " 保存時にtabを2スペースに変換する
+  %s/\t/  /ge
+
+  call setpos(".", cursor)
+  unlet cursor
 endfunction
 
 autocmd BufWritePre * call <SID>remove_dust()
@@ -27,3 +29,9 @@ autocmd InsertEnter * set nohlsearch
 " F10:行番号表示／非表示
 nnoremap <F10> :<C-u>setlocal number!<CR>
 inoremap <F10> <Esc>:<C-u>setlocal number!<CR><Insert>
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set backspace=indent,eol,start
+set autoindent

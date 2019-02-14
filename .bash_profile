@@ -43,4 +43,5 @@ else
 fi
 #### end ####
 
+export PROMPT_COMMAND="history -a"
 PS1="\n\t \u@\h:\[\e[91m\]\w ${PS1_GIT_BRANCH}\e[0m\]\n$"

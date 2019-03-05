@@ -1,14 +1,15 @@
 export PATH=/usr/local:$PATH
 export LSCOLORS=gxfxbxdxcxegedabagacad
+export PROMPT_COMMAND='history -a'
+
 alias ls='ls -GhF'
 alias l='ls -l'
 alias la='ls -A'
 alias ll='ls -lA'
 alias chrome="open /Applications/Google\ Chrome.app"
 alias macdown="/Applications/MacDown.app/Contents/MacOS/MacDown"
-
 alias csshX='i2cssh'
-alias jmeter='java -jar /Users/a-nagao/apache-jmeter-3.2/bin/ApacheJMeter.jar &'
+# alias jmeter='java -jar /Users/a-nagao/apache-jmeter-3.2/bin/ApacheJMeter.jar &'
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
@@ -19,9 +20,6 @@ if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# source /usr/local/etc/bash_completion.d/git-prompt.sh
-# source /usr/local/etc/bash_completion.d/git-completion.bash
 
 #### display branch name on PS1 ###
 function length()
@@ -43,5 +41,4 @@ else
 fi
 #### end ####
 
-export PROMPT_COMMAND="history -a"
 PS1="\n\t \u@\h:\[\e[91m\]\w ${PS1_GIT_BRANCH}\e[0m\]\n$"

@@ -1,4 +1,4 @@
-export PATH=/usr/local:$PATH
+# export PATH=/usr/local:$PATH
 export LSCOLORS=gxfxbxdxcxegedabagacad
 export PROMPT_COMMAND='history -a'
 
@@ -13,6 +13,15 @@ alias more='less -FX --quit-at-eof'
 
 # alias jmeter='java -jar /Users/a-nagao/apache-jmeter-3.2/bin/ApacheJMeter.jar &'
 
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias q='exit'
+
+alias be='bundle exec'
+alias railsc='bundle exec rails c'
+alias dbmigrate='bundle exec rails db:create db:migrate'
+alias tree='tree -a -C -I "node_modules|cache|bin|.git"'
+
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
@@ -20,8 +29,6 @@ if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
         source ~/.bashrc
     fi
 fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 #### display branch name on PS1 ###
 function length()
@@ -47,9 +54,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# if ls /Volumes/keys/Gerhilde.rsa
-# then
-#   ssh Sgw_nagaoEC2
-# else
-#   echo 'SSH NG'
-# fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

@@ -32,6 +32,6 @@ inoremap <F10> <Esc>:<C-u>setlocal number!<CR><Insert>
 
 set expandtab
 set tabstop=2
-set shiftwidth=2
 set backspace=indent,eol,start
-set autoindent
+set smartindent
+set pastetoggle=<F2>

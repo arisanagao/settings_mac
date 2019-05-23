@@ -28,7 +28,25 @@ brew install bash-completion
 brew install tree
 ```
 
-## Install Ruby
+
+## Install Ruby using rbenv
+### Install rbenv and ruby-build
+```sh
+brew install rbenv ruby-build
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+```
+
+
+```
+rbenv install --list # List all available versions
+rbenv install 2.5.0
+rbenv global 2.5.0
+```
+
+
+
+## Install Ruby using RVM
 
 ```
 brew install gnupg2
@@ -41,9 +59,3 @@ curl -sSL https://get.rvm.io | bash
 rvm install 2.5
 ```
 
-## Install Ruby using rbenv
-```
-rbenv install --list # List all available versions
-rbenv install 2.5.0
-rbenv global 2.5.0
-```

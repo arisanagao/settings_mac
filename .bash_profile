@@ -20,7 +20,7 @@ alias q='exit'
 alias be='bundle exec'
 alias railsc='bundle exec rails c'
 alias dbmigrate='bundle exec rails db:create db:migrate'
-alias tree='tree -a -C -I "node_modules|cache|bin|.git"'
+alias tree='tree -a -C -I "node_modules|cache|.git"'
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 

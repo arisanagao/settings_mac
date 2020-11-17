@@ -2,6 +2,8 @@
 
 ## Install list
 
+- Visual Studio Code
+- https://github.com/edihbrandon/RictyDiminished
 - [Google Chrome](https://www.google.co.jp/chrome/index.html)
 - [Homebrew](https://brew.sh/index_ja)
 - [英かな](https://ei-kana.appspot.com/)
@@ -15,7 +17,6 @@
 - Zoom
 - Snap Camera
 - Docker
-- Visual Studio Code
 
 ## App Store
 
